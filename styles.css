@@ -101,45 +101,52 @@ textarea{min-height:110px;resize:vertical}
   .form-grid{grid-template-columns:1fr}
   .physician-photo{margin:auto}
 }
-/* Updated equal physician card layout */
+/* Final equal physician layout */
 
-.physician-grid {
+.equal-physician-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 26px;
   align-items: stretch;
 }
 
 .physician-card-equal {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 540px;
+  display: grid;
+  grid-template-rows: 280px 1fr;
+  min-height: 560px;
+  text-align: left;
 }
 
-.physician-logo-box {
-  height: 250px;
+.physician-logo-frame {
+  width: 100%;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
 }
 
-.physician-logo-box .logo-only {
-  max-width: 240px;
-  max-height: 230px;
-  width: auto;
-  height: auto;
+.physician-logo-img {
+  width: 260px;
+  height: 260px;
   object-fit: contain;
+  display: block;
   margin: 0 auto;
 }
 
+/* Dr. Bazza logo appears larger because of the image canvas, so scale it slightly down */
+.bazza-logo-equal {
+  transform: scale(0.82);
+}
+
+/* Dr. Adala logo stays standard */
+.adala-logo-equal {
+  transform: scale(1);
+}
+
 .physician-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .physician-content h3 {
@@ -147,29 +154,34 @@ textarea{min-height:110px;resize:vertical}
 }
 
 .physician-content p {
-  max-width: 440px;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 96px;
 }
 
 .physician-content .badge {
-  margin-top: auto;
+  align-self: flex-start;
 }
 
 @media (max-width:1000px) {
-  .physician-grid {
+  .equal-physician-grid {
     grid-template-columns: 1fr;
   }
 
   .physician-card-equal {
+    grid-template-rows: auto 1fr;
     min-height: auto;
+    text-align: center;
   }
 
-  .physician-logo-box {
-    height: auto;
+  .physician-content .badge {
+    align-self: center;
   }
 
-  .physician-logo-box .logo-only {
-    max-width: 220px;
+  .physician-logo-frame {
+    height: 240px;
+  }
+
+  .physician-logo-img {
+    width: 230px;
+    height: 230px;
   }
 }
