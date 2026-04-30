@@ -101,3 +101,75 @@ textarea{min-height:110px;resize:vertical}
   .form-grid{grid-template-columns:1fr}
   .physician-photo{margin:auto}
 }
+/* Updated equal physician card layout */
+
+.physician-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  align-items: stretch;
+}
+
+.physician-card-equal {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 540px;
+}
+
+.physician-logo-box {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.physician-logo-box .logo-only {
+  max-width: 240px;
+  max-height: 230px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.physician-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.physician-content h3 {
+  margin-top: 0;
+}
+
+.physician-content p {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.physician-content .badge {
+  margin-top: auto;
+}
+
+@media (max-width:1000px) {
+  .physician-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .physician-card-equal {
+    min-height: auto;
+  }
+
+  .physician-logo-box {
+    height: auto;
+  }
+
+  .physician-logo-box .logo-only {
+    max-width: 220px;
+  }
+}
