@@ -1,0 +1,15 @@
+OYA Hermitage Clinic final package test report
+
+HTML files checked: index.html, referral.html, intake.html, ffccc-intake.html
+Internal asset/link check: PASS
+All internal HTML, CSS, and image references exist.
+
+Main button checks:
+- Phone: tel:8256005902
+- Online booking: https://cloud.healthquest.ca:45277/onlinebooking
+- Directions: Google Maps link to 12719 Victoria Trail NW Edmonton AB T5A 4J4
+
+Logo handling:
+- CSS uses width/max-width + height:auto + object-fit:contain to avoid stretching/distortion.
+- OYA and Dr. Bazza logos are based on original uploaded references.
+- Dr. Adala logo is a clean A-monogram matching the brand style.
